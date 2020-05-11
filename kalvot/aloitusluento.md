@@ -6,7 +6,7 @@
 
 - Ohjaajat
     - Saska Dönges -- **saskeli** -- etunimi.sukunimi@helsinki.fi
-    - Hannu Kärnä -- tunimi.sukunimi@helsinki.fi
+    - Hannu Kärnä -- etunimi.sukunimi@helsinki.fi
 - Yhteyttä sähköpostilla tai telegrammissa kurssikanavalla
 
 - Telegram-kanava https://t.me/tkttiralabra/
