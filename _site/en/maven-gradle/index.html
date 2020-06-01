@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  
+  <meta charset="UTF-8">
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Maven and Gradle | Tiralabra - 2020 alkukesä</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Maven and Gradle" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Below minimum effort was to create maven and gradle projects for java are presented. If you already know what you are doing and have your own preferred approach to project creation, you are free to disregard this document." />
+<meta property="og:description" content="Below minimum effort was to create maven and gradle projects for java are presented. If you already know what you are doing and have your own preferred approach to project creation, you are free to disregard this document." />
+<link rel="canonical" href="http://localhost:4000/2020_alkukesa/en/maven-gradle/" />
+<meta property="og:url" content="http://localhost:4000/2020_alkukesa/en/maven-gradle/" />
+<meta property="og:site_name" content="Tiralabra - 2020 alkukesä" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-01T19:40:53+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/2020_alkukesa/en/maven-gradle/","datePublished":"2020-06-01T19:40:53+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020_alkukesa/en/maven-gradle/"},"headline":"Maven and Gradle","description":"Below minimum effort was to create maven and gradle projects for java are presented. If you already know what you are doing and have your own preferred approach to project creation, you are free to disregard this document.","dateModified":"2020-06-01T19:40:53+03:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="/2020_alkukesa/assets/css/style.css?v=4d9fe5afcb6eb45fb2739b48b711df458de36f88">
+  <script src=/2020_alkukesa/assets/js/main.js ></script>
+
+</head>
+
+<body>
+
+  
+  <nav class="upper-nav">
+    <ol>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/bug_bounty/">Errors in the material</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/documentation/">Documentation</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/faq/">FAQ</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/git/">Git resources</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/index.html">Data Structures Project</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/issues/">Enabling issue creation for your repository</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/labtool/">Labtool</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/maven-gradle/">Maven and Gradle</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/peer_review/">Peer reviews</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/submissions/">Submissions</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/timing/">Course timing</a>
+        </li>
+        
+        <li class="upper-nav-obj"><a href="/2020_alkukesa/en/topics/">Topic ideas</a>
+        </li>
+        
+    </ol>
+</nav>
+  
+
+  <header class="page-header" role="banner">
+    <h1 class="project-name">Maven and Gradle</h1>
+    <h2 class="project-tagline">
+      Helsingin yliopiston Aineopintojen harjoitustyö: Tietorakenteet ja algoritmit - kurssin kurssisivu</h2>
+    
+    <a href="https://github.com/millakortelainen/2020_alkukesa" class="btn">View on GitHub</a>
+    
+    
+  </header>
+
+  <main id="content" class="main-content" role="main">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <script src="../../assets/fuu.js"></script>
+    <h1 class="post-title p-name" itemprop="name headline">Maven and Gradle</h1>
+    <p class="post-meta"></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Below minimum effort was to create maven and gradle projects for java are presented. If you already know what you are doing and have your own preferred approach to project creation, you are free to disregard this document.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Apache_Maven">Maven</a> and <a href="https://en.wikipedia.org/wiki/Gradle">Gradle</a> are <a href="https://en.wikipedia.org/wiki/Build_automation">Build automation</a> tools for java. For example, both of these make creating test coverage reports or executable jar files fairly easy.</p>
+
+<h3 id="1-create-a-project-repository">1. Create a project repository</h3>
+
+<p>When using netbeans it’s often convenient to first create the project repository since IDEs are typically able to automatically update  <code class="highlighter-rouge">.gitignore</code> files as the program progresses.</p>
+
+<p><img src="../../assets/create.png" alt="Git projekti" /></p>
+
+<p>You’ll probably want to check the “Initialize repository with README.md” box so the project can be instantly cloned after creation.</p>
+
+<h3 id="2-clone-the-repository">2. Clone the repository</h3>
+
+<p>Copy the link to the repository</p>
+
+<p><img src="../../assets/clone.png" alt="clone" /></p>
+
+<p>Run <code class="highlighter-rouge">git clone &lt;linkki repoon&gt;</code></p>
+
+<h3 id="gradle-only-3a-create-a-gradle-project-using-netbeans">[GRADLE only] 3a. Create a gradle project using netbeans</h3>
+
+<p>Check <code class="highlighter-rouge">Tools -&gt; Plugins</code> to make sure that gradle support is installed in neabeans.</p>
+
+<p><img src="../../assets/gradle_plugin.png" alt="plugin" /></p>
+
+<p>If gradle support has not been installed you can find it from the “available plugins” tab.</p>
+
+<p>Go to create a new project with netbeans but select <code class="highlighter-rouge">Gradle -&gt; Sinlge Gradle Project</code> from the settings.</p>
+
+<p><img src="../../assets/gradle_create1.png" alt="gradle create" /></p>
+
+<p>Create the project in the repository you cloned.</p>
+
+<p><img src="../../assets/gradle_create2.png" alt="location" /></p>
+
+<p>Add at least the following lines to the <code class="highlighter-rouge">build.gradle</code> file. You may want to update the file later as well but that is beyond the scope of this tutorial. (Add the lines to the right place in the file. The lines already in the file should point to the right locations)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+check.dependsOn jacocoTestReport
+
+</code></pre></div></div>
+
+<h3 id="maven-only-3b-create-a-maven-project-using-netbeans">[MAVEN only] 3b Create a Maven project using netbeans</h3>
+
+<p>The project is created using the <strong>New Project</strong> wizard, but instead of selecting the <strong>Java</strong> category, select <strong>Maven</strong>. Now select <strong>Java Application</strong> from the list on the right.</p>
+
+<p><img src="../../assets/mvn_create.png" alt="create maven" /></p>
+
+<p>On the page <strong>Name and Location</strong>, you should give you program a good and descriptive name. Set <strong>Project Location</strong> to your cloned git repository. You should also change <strong>Group id</strong> to your project name or at least something other than <em>com.mycompany.enterprising.domain</em>. Note that this <strong>should not contain any caps</strong>. This is important if you are going to do mutation texting.</p>
+
+<p><img src="../../assets/loc.png" alt="location" /></p>
+
+<p>The Maven project is very similar to a “normal” Java-project. The big difference is the pom.xml file that contains all the project dependacies in xml format. Add some libraries to ease testing the project.</p>
+
+<p>before adding stuff your pom.xml should look a bit like this:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>superohjelma<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>SuperOhjelma<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.1.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+    <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+        <span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>
+        <span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>
+    <span class="nt">&lt;/properties&gt;</span>
+
+    <span class="c">&lt;!-- Stuff should be added here--&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+
+<p>The start of this xml is project specific and we will leave it alone. Instead we add some dependancies and plugins. Add the the following between the <code class="highlighter-rouge">&lt;/properties&gt;</code> and <code class="highlighter-rouge">&lt;/project&gt;</code> tags:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>4.12<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+
+<span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+        <span class="nt">&lt;plugin&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;configuration&gt;</span>
+                <span class="nt">&lt;source&gt;</span>1.8<span class="nt">&lt;/source&gt;</span>
+                <span class="nt">&lt;target&gt;</span>1.8<span class="nt">&lt;/target&gt;</span>
+            <span class="nt">&lt;/configuration&gt;</span>
+            <span class="nt">&lt;version&gt;</span>3.3<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/plugin&gt;</span>
+        <span class="nt">&lt;plugin&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.pitest<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>pitest-maven<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>1.1.8<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+<span class="nt">&lt;/build&gt;</span>
+</code></pre></div></div>
+
+<p>After adding the lines above your pom.xml shoult look something like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>superohjelma<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>SuperOhjelma<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+    <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+        <span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>
+        <span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>
+    <span class="nt">&lt;/properties&gt;</span>
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>4.12<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+    <span class="nt">&lt;build&gt;</span>
+        <span class="nt">&lt;plugins&gt;</span>
+            <span class="nt">&lt;plugin&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;configuration&gt;</span>
+                    <span class="nt">&lt;source&gt;</span>1.8<span class="nt">&lt;/source&gt;</span>
+                    <span class="nt">&lt;target&gt;</span>1.8<span class="nt">&lt;/target&gt;</span>
+                <span class="nt">&lt;/configuration&gt;</span>
+                <span class="nt">&lt;version&gt;</span>3.3<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/plugin&gt;</span>
+            <span class="nt">&lt;plugin&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.pitest<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>pitest-maven<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>1.1.8<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/plugin&gt;</span>
+        <span class="nt">&lt;/plugins&gt;</span>
+    <span class="nt">&lt;/build&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+
+<p>After this mutation testing reports with test coverage can be created. Creating these reports can be made easier by doing the following:</p>
+
+<p>Add a new file to your project using te <strong>New File…</strong> button. Select <strong>XML -&gt; XML Document</strong> and name the new file <strong>nbactions</strong>. From the next window, select <strong>Well-formed Document</strong> and press Finish. Your project should now containe the <em>nbactions.xml</em> file. Move it to the Files folder it it’s not already there.</p>
+
+<p>Open the file and replace the contents with:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;actions&gt;</span>
+    <span class="nt">&lt;action&gt;</span>
+        <span class="nt">&lt;actionName&gt;</span>CUSTOM-pit<span class="nt">&lt;/actionName&gt;</span>
+        <span class="nt">&lt;displayName&gt;</span>pit<span class="nt">&lt;/displayName&gt;</span>
+        <span class="nt">&lt;goals&gt;</span>
+            <span class="nt">&lt;goal&gt;</span>org.pitest:pitest-maven:mutationCoverage<span class="nt">&lt;/goal&gt;</span>
+        <span class="nt">&lt;/goals&gt;</span>
+    <span class="nt">&lt;/action&gt;</span>
+<span class="nt">&lt;/actions&gt;</span>
+</code></pre></div></div>
+
+<p>Now your project has a custom context menu where mutation and test coverage reports can be created.</p>
+
+<h3 id="4-create-the-documentation-folder-and-push-to-git">4. Create the documentation folder and push to git</h3>
+
+<p>You shuould add a new folder for documentation, to keep the project neat. To an empty folder you will need to add at least one file so that git adds te folder to version control. You can for example create the first weekly report. After this you are ready to push your changes to git.</p>
+
+<p><img src="../../assets/doc.png" alt="folder" /></p>
+
+  </div><a class="u-url" href="/2020_alkukesa/en/maven-gradle/" hidden></a>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var title = "Tiralabra - 2020 alkukesä";
+      var description = "Helsingin yliopiston Aineopintojen harjoitustyö: Tietorakenteet ja algoritmit - kurssin kurssisivu";
+      var refurl = "http://localhost:4000";
+      var eroot = document.getElementsByClassName("page-header")[0];
+      if (document.URL.includes("/en/")) {
+        refurl = refurl + "en/";
+        title = "Data Structures Project, 2020 start of summer";
+        description = "Course page for the Data Structures Project course at the University of Helsinki";
+      }
+      var elem = document.getElementsByClassName("project-tagline")[0];
+      var a = document.createElement("a");
+      a.setAttribute("href", refurl);
+      a.setAttribute("style", "color: white;text-decoration: none");
+      a.appendChild(elem);
+      elem.innerHTML = description;
+      eroot.insertBefore(a, eroot.firstChild);
+  
+      elem = document.getElementsByClassName("project-name")[0];
+      a = document.createElement("a");
+      a.setAttribute("href", refurl);
+      a.setAttribute("style", "color: white;text-decoration: none");
+      a.appendChild(elem);
+      elem.innerHTML = title;
+      eroot.insertBefore(a, eroot.firstChild);
+    });
+    
+  </script>
+</article>
+
+
+    <footer class="site-footer">
+      
+      <span class="site-footer-owner"><a href="https://github.com/millakortelainen/2020_alkukesa">2020_alkukesa</a>
+        is maintained by <a href="https://github.com/millakortelainen">millakortelainen</a>.</span>
+      
+      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
+          Pages</a>.</span>
+    </footer>
+  </main>
+</body>
+
+</html>

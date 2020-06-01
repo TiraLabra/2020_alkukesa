@@ -1,6 +1,7 @@
 ---
 layout: info
 title:  "Aiheita"
+nav-title: "Aiheita"
 categories: jekyll update
 tag: info
 permalink: /fi/aiheet/
