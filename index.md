@@ -17,7 +17,16 @@ Salli scriptit ainakin lähteestä <code>tiralabra.github.io</code>.
 </noscript>
 
 ## Ohjaaja
-
+```python
+for i in range(10):
+	print("lol")
+```
+{% highlight javascript %}
+document.write("JavaScript is a simple language for javatpoint learners");
+{% endhighlight %}
+```sql
+SELECT * FROM Tuotteet WHERE nimi='lanttu';
+```
 <ul>
 <script>
 var script = document.scripts[document.scripts.length - 1];
