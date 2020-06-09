@@ -51,7 +51,7 @@ Detailed course timing is available [here](timing/).
     if (timing["demo"]) {
       document.write("Time an place for demonstration sessions has been set. Contact a course assistant if you can't make it.");
     } else {
-      document.write("Doodle link for demo session planning has been sent to registered students. The email address is the one configured in weboodi.");
+      document.write("Doodle link for demo session planning has been sent to registered students. The email address is the one configured in labtool.");
     }
    } else {
     document.write("A poll will be sent out around the half way point of the course to schedule demo session(s).");
